@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #f8a5c2, #f78fb3);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .album-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  h1 {
+    color: #f78fb3;
+    margin-bottom: 20px;
+  }
+  
+  .photo-album {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    position: absolute;
+    bottom: -50%;
+    right: -50%;
+    animation: scrollDiagonal 20s linear infinite;
+  }
+  
+  .photo-album img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  @keyframes scrollDiagonal {
+    0% {
+      transform: translate(0, 0);
+    }
